@@ -3,11 +3,10 @@ from datetime import time
 from appium import webdriver
 
 desired_cap ={
-    "platformName": "android",
-    "appium:platformVersion": "7.1.2",
-    "appium:deviceName": "SM-G935FD",
-    "appium:automationName": "appium",
-    "appium:newCommandTimeout": "180000"
+  "platformName": "android",
+  "appium:platformVersion": "7.1.2",
+  "appium:deviceName": "google G011A",
+  "appium:automationName": "appium"
 }
 
 driver = webdriver.Remote("http://localhost:4723/wd/hub",desired_cap)
@@ -20,7 +19,7 @@ driver.find_element('xpath','//android.view.View[@content-desc="Vitals"]').click
 driver.find_element('xpath','//android.view.View[@bounds="[29,148][288,304]"]').click()
 driver.find_element('xpath','//android.view.View[@content-desc="Add Weight"]').click()
 driver.find_element('xpath','//android.widget.EditText[@bounds="[288,114][564,171]"]').click()
-driver.find_element('xpath','//android.widget.EditText[@bounds="[288,114][564,171]"]').send_keys('55')
+driver.find_element('xpath','//android.widget.EditText[@bounds="[288,114][564,171]"]').send_keys('50')
 driver.find_element('xpath','//android.view.View[@content-desc="Add"]').click()
 driver.implicitly_wait(350)
 
@@ -29,7 +28,7 @@ driver.find_element('xpath','//android.view.View[@bounds="[288,148][547,304]"]')
 
 driver.find_element('xpath','//android.view.View[@content-desc="Add Height"]').click()
 driver.find_element('xpath','//android.widget.EditText[@index="1"]').click()
-driver.find_element('xpath','//android.widget.EditText[@index="1"]').send_keys('55')
+driver.find_element('xpath','//android.widget.EditText[@index="1"]').send_keys('159')
 driver.find_element('xpath','//android.view.View[@content-desc="Add"]').click()
 driver.implicitly_wait(450)
 
@@ -64,8 +63,8 @@ driver.implicitly_wait(350)
 driver.find_element('xpath','//android.view.View[@bounds="[288,459][547,614]"]').click()
 
 driver.find_element('xpath','//android.view.View[@content-desc="Add BP"]').click()
-driver.find_element('xpath','//android.widget.EditText[@bounds="[408,115][467,172]"]').click()
-driver.find_element('xpath','//android.widget.EditText[@bounds="[408,115][467,172]"]').send_keys('120')
+driver.find_element('xpath','//android.widget.EditText[@bounds="[406,115][466,172]"]').click()
+driver.find_element('xpath','//android.widget.EditText[@bounds="[406,115][466,172]"]').send_keys('120')
 driver.find_element('xpath','//android.widget.EditText[@bounds="[482,115][541,172]"]').send_keys('53')
 driver.find_element('xpath','//android.view.View[@content-desc="Add"]').click()
 driver.implicitly_wait(350)

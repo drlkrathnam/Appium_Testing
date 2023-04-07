@@ -1,0 +1,1 @@
+from Lifeeazy_Partner import HCP_Appointment

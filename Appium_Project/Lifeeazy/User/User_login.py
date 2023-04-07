@@ -20,22 +20,25 @@ driver.find_element('xpath',("//android.view.View[@content-desc=' Skip & Get Sta
 driver.implicitly_wait(30)
 driver.find_element('xpath',("//android.widget.EditText[@index='3']")).click()
 driver.find_element('xpath',("//android.widget.EditText[@index='3']")).send_keys("6309692221")
+
+touch_action = TouchAction(driver)
+touch_action.press(x=501, y=984).release().perform()
+
 driver.find_element('xpath','//android.view.View[@content-desc="Next"]').click()
-# driver.find_element('co','//android.view.View[@content-desc="Next"]').click()
-# driver.tap(positions=[(57,255)])
+time.sleep(5)
 
-
-# driver.find_element('xpath',("//android.widget.EditText[@index='3']")).send_keys("6309692221")
-time.sleep(10)
 driver.find_element('xpath','//android.view.View[@bounds="[30,227][546,285]"]').click()
 touch_action = TouchAction(driver)
 touch_action.tap(x=333, y=257).perform()
-driver.is_keyboard_shown()
-# driver.find_element('xpath',("//android.widget.EditText[@index='3']")).click()
-driver.find_element('xpath',("//android.widget.EditText[@index='3']")).send_keys("530003")
-# driver.implicitly_wait(10)
-# driver.find_element('xpath','//android.view.View[@bounds="[30,227][546,285]"]').set_value("5")
-# driver.find_element('xpath','//android.view.View[@index="3"]').click()
-# driver.find_element('xpath','//android.view.View[@bounds="[30,227][546,285]"]').send_keys('5')
+time.sleep(3)
 
-# driver.find_element('xpath','//android.view.View[@bounds="[147,375][429,671]"]').click()
+touch_action.tap(x=259, y=708).perform()
+touch_action.tap(x=144, y=708).perform()
+touch_action.tap(x=542, y=708).perform()
+touch_action.tap(x=542, y=708).perform()
+touch_action.tap(x=542, y=708).perform()
+touch_action.tap(x=144, y=708).perform()
+
+driver.implicitly_wait(3)
+driver.find_element('xpath','//android.view.View[@bounds="[147,375][429,671]"]').click()
+touch_action.tap(x=286, y=649).perform()
